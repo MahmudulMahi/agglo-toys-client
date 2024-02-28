@@ -167,38 +167,28 @@ const Update = () => {
                   />
                 </label>
               </div>
-      
-            {/* Row 4 */}
-            <div className="md:flex gap-6 my-3">
-              <div className="form-control md:w-1/2">
-                <label className="label">
-                  <span className="label-text">Toy Price</span>
-                </label>
-                <label className="input-group">
-                  <input
-                    type="text"
-                    name="price"
-                    defaultValue={price}
-                    placeholder="Enter Your Toy Price"
-                    className="input w-full"
-                  />
-                </label>
-              </div>
               <div className="form-control md:w-1/2 mt-3 md:mt-0">
                 <label className="label">
-                  <span className="label-text">Available Quantity</span>
+                  <span className="label-text">Sub Category</span>
                 </label>
                 <label className="input-group">
-                  <input
-                    type="text"
-                    defaultValue={quantity}
-                    name="quantity"
-                    placeholder="Enter Available Quantity"
+                  <select
+                    value={selectedSubcategory}
+                    onChange={handleSubcategoryChange}
                     className="input w-full"
-                  />
+                  >
+                    <option value="">Select a sub-category</option>
+                    {options.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
                 </label>
               </div>
             </div>
+            {/* Row 4 */}
+       
             {/* Row 5 */}
             <div className="md:flex gap-6 my-3">
               <div className="form-control w-full">
